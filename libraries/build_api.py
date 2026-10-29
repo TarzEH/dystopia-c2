@@ -174,14 +174,14 @@ def build_linux_script(source: str, name: str, secretbox_src: Optional[str]) -> 
     agent_path.write_text(source, encoding="utf-8")
 
     req_lines = [
-        "discord.py>=2.3.2",
-        "requests>=2.28.0",
-        "psutil>=5.9.0",
-        "urllib3>=1.26.0",
+        "discord.py>=2.7.0",
+        "requests>=2.32.0",
+        "psutil>=6.0.0",
+        "urllib3>=2.5.0",
         "evdev>=1.6.0",
     ]
     if secretbox_src is not None:
-        req_lines.append("cryptography>=41.0.0")
+        req_lines.append("cryptography>=44.0.1")
     req_lines.extend(
         [
             "# optional GUI screenshot support:",
